@@ -13,10 +13,12 @@ public class WebDriverAutoSettings {
         System.setProperty("webdriver.chrome.driver", "C:\\WebDrivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        // открытие сайта
+        driver.get("https://beru.ru/");
     }
 
     @After
     public void close(){
-        driver.quit();
+        //driver.quit();
     }
 }
