@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTestsSuite">
+    <test name="first_test">
+        <classes>
+            <class name="ru.org.autotest.FirstTest"/>
+        </classes>
+    </test>
+    <test name="second_test">
+        <classes>
+            <class name="ru.org.autotest.SecondTest"/>
+        </classes>
+    </test>
+</suite>
