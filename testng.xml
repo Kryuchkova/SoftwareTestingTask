@@ -11,4 +11,5 @@
             <class name="ru.org.autotest.SecondTest"/>
         </classes>
     </test>
+
 </suite>

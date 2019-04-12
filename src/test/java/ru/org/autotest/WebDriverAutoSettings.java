@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 
 public class WebDriverAutoSettings {
-    public ChromeDriver driver;
+     public ChromeDriver driver;
 
     @BeforeMethod
     public void setUp() {
@@ -22,6 +22,6 @@ public class WebDriverAutoSettings {
 
     @AfterMethod
     public void close(){
-        driver.quit();
+         driver.quit();
     }
 }

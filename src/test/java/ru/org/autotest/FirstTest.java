@@ -5,11 +5,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 public class FirstTest extends AccountOptions {
     @Test

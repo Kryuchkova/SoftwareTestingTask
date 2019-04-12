@@ -5,17 +5,16 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
+
 
 public class SecondTest extends AccountOptions{
     @Test
     public void second_test(){
         //изменение города
         //нажатие на поле "регион"
+        // поменять селекторы на спан > спан > спан
         driver.findElement(By.cssSelector("div.unique-selling-proposition-line__region > span")).click();
         //вписывание другого города
         driver.findElement(By.xpath("//input[@class='input__control']")).sendKeys("Хвалынск");
@@ -24,7 +23,10 @@ public class SecondTest extends AccountOptions{
         //нажатие на кнопку "продолжить с новым регионом"
         driver.findElement(By.cssSelector("div.header2-region-popup > button")).click();
         //проверка изменения региона на Хвалынск
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.unique-selling-proposition-line__region")));
+        //!!!!!!!!!!!!!!!!!
+        // refresh > not > проверяем со старым значением, кторые мы сохранили до этого!!!!
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.textToBe(By.cssSelector("span.link__inner"), "Хвалынск"));
+
         Assert.assertTrue(driver.findElement(By.cssSelector("span.link__inner")).getText().equals("Хвалынск"));
 
         //вхождение в аккаунт
