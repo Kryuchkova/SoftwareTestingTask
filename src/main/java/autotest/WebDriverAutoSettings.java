@@ -1,13 +1,18 @@
-package ru.org.autotest;
+package autotest;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 
+import java.util.concurrent.TimeUnit;
+
 public class WebDriverAutoSettings {
-     public ChromeDriver driver;
+    public static ChromeDriver driver;
+
+    public static WebDriver getDriver() {
+        return driver;
+    }
 
     @BeforeMethod
     public void setUp() {
@@ -16,12 +21,11 @@ public class WebDriverAutoSettings {
         driver.manage().window().maximize();
         // открытие сайта
         driver.get("https://beru.ru/");
-        //закрытие всплывающего баннера
-        driver.findElement(By.cssSelector("div.modal__content > div")).click();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @AfterMethod
-    public void close(){
-         driver.quit();
+    public void close() {
+        //driver.quit();
     }
 }

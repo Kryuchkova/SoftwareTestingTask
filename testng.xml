@@ -3,13 +3,9 @@
 <suite name="AllTestsSuite">
     <test name="first_test">
         <classes>
-            <class name="ru.org.autotest.FirstTest"/>
+            <class name="autotest.FirstTest"/>
         </classes>
     </test>
-    <test name="second_test">
-        <classes>
-            <class name="ru.org.autotest.SecondTest"/>
-        </classes>
-    </test>
+
 
 </suite>

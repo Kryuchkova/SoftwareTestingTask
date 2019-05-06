@@ -1,4 +1,4 @@
-package ru.org.autotest;
+package autotest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -30,7 +30,7 @@ public class SecondTest extends AccountOptions{
         Assert.assertTrue(driver.findElement(By.cssSelector("span.link__inner")).getText().equals("Хвалынск"));
 
         //вхождение в аккаунт
-        LogIn();
+        //LogIn();
 
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.header2-nav__user")));
         //наведение курсора мыши на элемент "Мой профиль"
@@ -55,6 +55,6 @@ public class SecondTest extends AccountOptions{
         //возвращаемся на родительскую страницу
         driver.switchTo().window(oldTab);
         //выходим из личного кабинета
-        LogOut();
+        //LogOut();
     }
 }
