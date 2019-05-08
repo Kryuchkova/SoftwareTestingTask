@@ -2,18 +2,23 @@ package autotest;
 
 import org.testng.annotations.Test;
 
-public class FirstTest extends WebDriverAutoSettings {
+public class FirstTest extends WebDriverAutoSettings
+{
     @Test
-    public void first_test() {
+    public void first_test()
+    {
         MainPage mainPage = new MainPage();
         //вхождение в аккаунт
         AccountOptions accountOption = mainPage.clickBtnSignIn();
         //вводим логин
-        accountOption.loginInput("kryuchkovaaleksandra@yandex.ru");
+        String login = "kryuchkovaaleksandra@yandex.ru";
+        accountOption.loginInput(login);
         //вводим пароль
         accountOption.passwordInput("kryuch2307");
         // проверка соответствия надписи
         mainPage.textBtnCheckUp();
+        // проверка соответствия логина
+        mainPage.loginTxtCheckUp(login);
         //выходим из личного кабинета
         accountOption.logOut();
     }

@@ -7,7 +7,8 @@ import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
-public class WebDriverAutoSettings {
+public class WebDriverAutoSettings
+{
     public static ChromeDriver driver;
 
     public static WebDriver getDriver() {
@@ -15,7 +16,8 @@ public class WebDriverAutoSettings {
     }
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp()
+    {
         System.setProperty("webdriver.chrome.driver", "C:\\WebDrivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -25,7 +27,8 @@ public class WebDriverAutoSettings {
     }
 
     @AfterMethod
-    public void close() {
+    public void close()
+    {
         //driver.quit();
     }
 }
