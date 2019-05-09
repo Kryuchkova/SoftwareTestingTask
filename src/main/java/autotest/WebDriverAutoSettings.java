@@ -1,6 +1,7 @@
 package autotest;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
@@ -10,6 +11,10 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverAutoSettings
 {
     public static ChromeDriver driver;
+
+    public WebDriver getDriver() {
+        return driver;
+    }
 
     @BeforeMethod
     public void setUp()

@@ -12,7 +12,6 @@ public class PersonalAccountPage extends WebDriverAutoSettings {
 
     public void changePageDriver(String oldTab, String option)
     {
-
         driver.findElement(By.linkText(option)).click();
         ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
         newTab.remove(oldTab);

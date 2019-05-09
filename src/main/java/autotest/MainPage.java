@@ -1,5 +1,6 @@
 package autotest;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,6 +10,7 @@ import org.testng.Assert;
 public class MainPage extends WebDriverAutoSettings
 {
     private WebDriverWait waiter = new WebDriverWait(driver, 10);
+    @Step("Click on the sign in button")
     public AccountOptions clickBtnSignIn()
     {
         // кнопка мой профиль
@@ -19,6 +21,7 @@ public class MainPage extends WebDriverAutoSettings
         return new AccountOptions();
     }
 
+    @Step("Check the change of entering title")
     public void textBtnCheckUp()
     {
         // кнопка мой профиль
@@ -28,6 +31,7 @@ public class MainPage extends WebDriverAutoSettings
         Assert.assertTrue(myProfile.getText().equals("Мой профиль"));
     }
 
+    @Step("Check the login in header")
     public void loginTxtCheckUp(String login)
     {
         // кнопка мой профиль

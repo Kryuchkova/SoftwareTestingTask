@@ -1,0 +1,8 @@
+autotest\TestListener.class
+autotest\AccountOptions.class
+autotest\MainPage.class
+autotest\PersonalAccountPage.class
+autotest\WebDriverAutoSettings.class
+autotest\CatalogPage.class
+autotest\ScreenShotListener.class
+autotest\CartPage.class

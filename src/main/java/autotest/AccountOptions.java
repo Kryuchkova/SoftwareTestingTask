@@ -1,5 +1,6 @@
 package autotest;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,6 +15,7 @@ public class AccountOptions extends WebDriverAutoSettings
         return new String(Base64.getDecoder().decode(decodePassword.getBytes()));
     }
 
+    @Step("Login input")
     public void loginInput(String login)
     {
         //заполнение поля логин
@@ -22,6 +24,7 @@ public class AccountOptions extends WebDriverAutoSettings
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
 
+    @Step("Password input")
     public void passwordInput(String password)
     {
         //заполнение поля пароль
@@ -31,6 +34,7 @@ public class AccountOptions extends WebDriverAutoSettings
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
 
+    @Step("Log out")
     public void logOut()
     {
         waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.header2-nav__user")));

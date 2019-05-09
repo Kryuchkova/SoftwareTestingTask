@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="AllTestsSuite" duration-ms="163023" started-at="2019-05-09T16:03:10Z" finished-at="2019-05-09T16:05:53Z">
+    <groups>
+    </groups>
+    <test name="first_test" duration-ms="25641" started-at="2019-05-09T16:03:10Z" finished-at="2019-05-09T16:03:35Z">
+      <class name="autotest.FirstTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:autotest.FirstTest@3fc9dfc5]" name="setUp" is-config="true" duration-ms="9688" started-at="2019-05-09T16:03:10Z" finished-at="2019-05-09T16:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="first_test()[pri:0, instance:autotest.FirstTest@3fc9dfc5]" name="first_test" duration-ms="9997" started-at="2019-05-09T16:03:20Z" finished-at="2019-05-09T16:03:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first_test -->
+        <test-method status="PASS" signature="close()[pri:0, instance:autotest.FirstTest@3fc9dfc5]" name="close" is-config="true" duration-ms="5702" started-at="2019-05-09T16:03:30Z" finished-at="2019-05-09T16:03:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- autotest.FirstTest -->
+    </test> <!-- first_test -->
+    <test name="second_test" duration-ms="91303" started-at="2019-05-09T16:03:35Z" finished-at="2019-05-09T16:05:07Z">
+      <class name="autotest.SecondTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:autotest.SecondTest@757d6814]" name="setUp" is-config="true" duration-ms="7676" started-at="2019-05-09T16:03:35Z" finished-at="2019-05-09T16:03:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="second_test(java.lang.String)[pri:0, instance:autotest.SecondTest@757d6814]" name="second_test" duration-ms="18149" started-at="2019-05-09T16:03:43Z" data-provider="citiesData" finished-at="2019-05-09T16:04:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Хвалынск]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- second_test -->
+        <test-method status="PASS" signature="close()[pri:0, instance:autotest.SecondTest@757d6814]" name="close" is-config="true" duration-ms="6400" started-at="2019-05-09T16:04:01Z" finished-at="2019-05-09T16:04:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:autotest.SecondTest@757d6814]" name="setUp" is-config="true" duration-ms="7238" started-at="2019-05-09T16:04:08Z" finished-at="2019-05-09T16:04:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="second_test(java.lang.String)[pri:0, instance:autotest.SecondTest@757d6814]" name="second_test" duration-ms="13994" started-at="2019-05-09T16:04:15Z" data-provider="citiesData" finished-at="2019-05-09T16:04:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Энгельс]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- second_test -->
+        <test-method status="PASS" signature="close()[pri:0, instance:autotest.SecondTest@757d6814]" name="close" is-config="true" duration-ms="8469" started-at="2019-05-09T16:04:29Z" finished-at="2019-05-09T16:04:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:autotest.SecondTest@757d6814]" name="setUp" is-config="true" duration-ms="7423" started-at="2019-05-09T16:04:37Z" finished-at="2019-05-09T16:04:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="second_test(java.lang.String)[pri:0, instance:autotest.SecondTest@757d6814]" name="second_test" duration-ms="16571" started-at="2019-05-09T16:04:45Z" data-provider="citiesData" finished-at="2019-05-09T16:05:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Волгоград]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- second_test -->
+        <test-method status="PASS" signature="close()[pri:0, instance:autotest.SecondTest@757d6814]" name="close" is-config="true" duration-ms="5362" started-at="2019-05-09T16:05:01Z" finished-at="2019-05-09T16:05:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- autotest.SecondTest -->
+    </test> <!-- second_test -->
+    <test name="third_test" duration-ms="46003" started-at="2019-05-09T16:05:07Z" finished-at="2019-05-09T16:05:53Z">
+      <class name="autotest.ThirdTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:autotest.ThirdTest@36b0fcd5]" name="setUp" is-config="true" duration-ms="8153" started-at="2019-05-09T16:05:07Z" finished-at="2019-05-09T16:05:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="third_test()[pri:0, instance:autotest.ThirdTest@36b0fcd5]" name="third_test" duration-ms="37004" started-at="2019-05-09T16:05:15Z" finished-at="2019-05-09T16:05:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- third_test -->
+        <test-method status="PASS" signature="close()[pri:0, instance:autotest.ThirdTest@36b0fcd5]" name="close" is-config="true" duration-ms="842" started-at="2019-05-09T16:05:52Z" finished-at="2019-05-09T16:05:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- autotest.ThirdTest -->
+    </test> <!-- third_test -->
+  </suite> <!-- AllTestsSuite -->
+</testng-results>

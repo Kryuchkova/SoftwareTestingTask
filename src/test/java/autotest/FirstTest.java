@@ -1,10 +1,15 @@
 package autotest;
 
+
+import io.qameta.allure.Description;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners({TestListener.class})
 public class FirstTest extends WebDriverAutoSettings
 {
     @Test
+    @Description("Test Description: Test checks the title of the Enterence and Personal Account")
     public void first_test()
     {
         MainPage mainPage = new MainPage();
