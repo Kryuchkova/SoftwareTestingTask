@@ -6,6 +6,14 @@
             <class name="autotest.FirstTest"/>
         </classes>
     </test>
-
-
+    <test name="second_test">
+        <classes>
+            <class name="autotest.SecondTest"/>
+        </classes>
+    </test>
+    <test name="third_test">
+        <classes>
+            <class name="autotest.ThirdTest"/>
+        </classes>
+    </test>
 </suite>

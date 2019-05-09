@@ -3,9 +3,7 @@ package autotest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Base64;
-
-public class SecondTest extends AccountOptions
+public class SecondTest extends WebDriverAutoSettings
 {
     @DataProvider
     public Object[] citiesData()
@@ -20,7 +18,7 @@ public class SecondTest extends AccountOptions
         //изменение города
         mainPage.changeCity(city);
         mainPage.clickBtnCity();
-        //проверка изменения региона на Хвалынск
+        //проверка изменения региона на заданный город
         mainPage.cityTxtCheckUp(city);
         //вхождение в аккаунт
         AccountOptions accountOption = mainPage.clickBtnSignIn();
@@ -29,16 +27,15 @@ public class SecondTest extends AccountOptions
         accountOption.loginInput(login);
         //вводим пароль
         accountOption.passwordInput("a3J5dWNoMjMwNw==");
-        mainPage.changePageToPerArea();
+        // переходим в "Настройки"
+        PersonalAccountPage personalAccountPage = mainPage.changePageToPerArea();
         //переход на дочернюю страницу
         String oldTab = driver.getWindowHandle();
         String option = "Настройки";
-        mainPage.changePageDriver(oldTab, option);
+        personalAccountPage.changePageDriver(oldTab, option);
         //проверка соответствия региона на старнице и в личном кабинете
-        mainPage.citiesCheckUp();
+        personalAccountPage.citiesCheckUp();
         //возвращаемся на родительскую страницу
-        mainPage.offPageDriver(oldTab);
-        //выходим из личного кабинета
-        accountOption.logOut();
+        personalAccountPage.offPageDriver(oldTab);
     }
 }

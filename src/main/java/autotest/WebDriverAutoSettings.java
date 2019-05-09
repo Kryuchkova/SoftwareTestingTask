@@ -1,7 +1,7 @@
 package autotest;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 
@@ -10,10 +10,6 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverAutoSettings
 {
     public static ChromeDriver driver;
-
-    public static WebDriver getDriver() {
-        return driver;
-    }
 
     @BeforeMethod
     public void setUp()
@@ -29,6 +25,11 @@ public class WebDriverAutoSettings
     @AfterMethod
     public void close()
     {
-        //driver.quit();
+        if (driver.findElement(By.cssSelector("div.header2-nav__user")).getText().equals("Мой профиль"))
+        {
+            AccountOptions accountOption = new AccountOptions();
+            accountOption.logOut();
+        }
+        driver.quit();
     }
 }

@@ -6,16 +6,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.util.ArrayList;
-
 public class MainPage extends WebDriverAutoSettings
 {
+    private WebDriverWait waiter = new WebDriverWait(driver, 10);
     public AccountOptions clickBtnSignIn()
     {
         // кнопка мой профиль
         WebElement myProfile = driver.findElement(By.cssSelector("div.header2-nav__user"));
         //вхождение в аккаунт
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(myProfile));
+        waiter.until(ExpectedConditions.visibilityOf(myProfile));
         myProfile.click();
         return new AccountOptions();
     }
@@ -25,7 +24,7 @@ public class MainPage extends WebDriverAutoSettings
         // кнопка мой профиль
         WebElement myProfile = driver.findElement(By.cssSelector("div.header2-nav__user"));
         //проверка соответствия названия заголовка
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(myProfile));
+        waiter.until(ExpectedConditions.visibilityOf(myProfile));
         Assert.assertTrue(myProfile.getText().equals("Мой профиль"));
     }
 
@@ -41,11 +40,10 @@ public class MainPage extends WebDriverAutoSettings
     {
         //изменение города
         //нажатие на поле "регион"
-        // поменять селекторы на спан > спан > спан
         driver.findElement(By.cssSelector("span.region-form-opener > span > span")).click();
         //вписывание другого города
         driver.findElement(By.xpath("//input[@class='input__control']")).sendKeys(city);
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.region-suggest__list-item")));
+        waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.region-suggest__list-item")));
         driver.findElement(By.cssSelector("div.region-suggest__list-item")).click();
     }
 
@@ -53,45 +51,30 @@ public class MainPage extends WebDriverAutoSettings
     {
         //нажатие на кнопку "продолжить с новым регионом"
         driver.findElement(By.cssSelector("div.header2-region-popup > button")).click();
+        driver.navigate().refresh();
     }
 
     public void cityTxtCheckUp(String city)
     {
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.link__inner")));
         Assert.assertTrue(driver.findElement(By.cssSelector("span.link__inner")).getText().equals(city));
     }
 
-    public void changePageToPerArea()
+    public PersonalAccountPage changePageToPerArea()
     {
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.header2-nav__user")));
+        waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.header2-nav__user")));
         //наведение курсора мыши на элемент "Мой профиль"
         driver.findElement(By.cssSelector("div.header2-nav__user")).click();
         //нажатие на поле Настройки
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()= 'Настройки']")));
+        waiter.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()= 'Настройки']")));
+        return new PersonalAccountPage();
     }
 
-    public void changePageDriver(String oldTab, String option)
+    public CatalogPage goToCatalog(String request)
     {
-
-        driver.findElement(By.linkText(option)).click();
-        ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
-        newTab.remove(oldTab);
-        //переходим на дочернюю страницу — точнее в раздел настройки личного кабинета
-        driver.switchTo().window(newTab.get(0));
-    }
-
-    public void citiesCheckUp()
-    {
-        //проверка соответствия региона на старнице и в личном кабинете
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(By.id("region")));
-        Assert.assertTrue(driver.findElement(By.cssSelector("span.link__inner")).getText().equals(driver.findElement(By.cssSelector("h2.n-headline__content > span")).getText()));
-    }
-
-    public void offPageDriver (String oldTab)
-    {
-        //закрываем текущюю вкладку
-        driver.close();
-        //возвращаемся на родительскую страницу
-        driver.switchTo().window(oldTab);
+        //переходим в раздел электрических зубных щеток
+        driver.findElement(By.xpath("//input[@name='text']")).sendKeys(request);
+        //нажатие на кнопку "Найти"
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        return new CatalogPage();
     }
 }

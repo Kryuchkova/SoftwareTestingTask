@@ -14,12 +14,10 @@ public class FirstTest extends WebDriverAutoSettings
         String login = "kryuchkovaaleksandra@yandex.ru";
         accountOption.loginInput(login);
         //вводим пароль
-        accountOption.passwordInput("kryuch2307");
+        accountOption.passwordInput("a3J5dWNoMjMwNw==");
         // проверка соответствия надписи
         mainPage.textBtnCheckUp();
         // проверка соответствия логина
         mainPage.loginTxtCheckUp(login);
-        //выходим из личного кабинета
-        accountOption.logOut();
     }
 }
