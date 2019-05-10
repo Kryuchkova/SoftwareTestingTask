@@ -1,8 +1,8 @@
-autotest\TestListener.class
 autotest\AccountOptions.class
 autotest\MainPage.class
+autotest\FailedStepListener.class
 autotest\PersonalAccountPage.class
 autotest\WebDriverAutoSettings.class
+autotest\ScreenShotMaker.class
 autotest\CatalogPage.class
-autotest\ScreenShotListener.class
 autotest\CartPage.class

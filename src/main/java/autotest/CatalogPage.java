@@ -1,5 +1,6 @@
 package autotest;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class CatalogPage extends WebDriverAutoSettings {
     private WebDriverWait waiter = new WebDriverWait(driver, 30);
-
+    @Step("Set priceFrom on given price = {0}")
     public void  setFromPrice(String price)
     {
         waiter.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='glpricefrom']")));
@@ -18,6 +19,7 @@ public class CatalogPage extends WebDriverAutoSettings {
         driver.findElement(By.xpath("//input[@id='glpricefrom']")).sendKeys(price);
     }
 
+    @Step("Set priceTo on given price = {0}")
     public  void setToPrice(String price)
     {
         // устанавливаем верхнюю границу цены
@@ -25,6 +27,7 @@ public class CatalogPage extends WebDriverAutoSettings {
         waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div._1PQIIOelRL")));
     }
 
+    @Step("Get all matching items from page")
     public void getAllResultItems()
     {
         // раскрываем все страницы до тех пор, пока на странице присутствует кнопка "показать еще"
@@ -35,6 +38,7 @@ public class CatalogPage extends WebDriverAutoSettings {
         }
     }
 
+    @Step("Check all items to fulfill price condition: priceFrom = {0} - priceTo = {1}")
     public void itemsCheckUp(String priceFrom, String priceTo)
     {
         //составляем массив элементов страниц
@@ -47,14 +51,17 @@ public class CatalogPage extends WebDriverAutoSettings {
         }
     }
 
+    @Step("Add a penultimate toothbush into a shopping cart")
     public void addItemIntoCart()
     {
+        waiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("div.search-result-snippet-cart-button button")));
         //список кнопок "в корзину"
         List<WebElement> listButton = driver.findElements(By.cssSelector("div.search-result-snippet-cart-button button"));
         // кладем предпоследнюю щетку в корзину
         listButton.get(listButton.size() - 2).click();
     }
 
+    @Step("Go into shopping cart")
     public CartPage goToCart()
     {
         // переходим в корзину

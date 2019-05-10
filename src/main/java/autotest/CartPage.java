@@ -1,5 +1,6 @@
 package autotest;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -8,6 +9,7 @@ import org.testng.Assert;
 public class CartPage extends WebDriverAutoSettings {
     private WebDriverWait waiter = new WebDriverWait(driver, 30);
 
+    @Step("Check free shipping")
     public void sumToFreeShipping()
     {
         // проверка значения “До бесплатной доставки осталось”
@@ -24,6 +26,7 @@ public class CartPage extends WebDriverAutoSettings {
         }
     }
 
+    @Step("Check the purchase price")
     public void costCheckUp()
     {
         // проверка, что итоговая цена равна <стоимость щетки> + <доставка>
@@ -39,6 +42,7 @@ public class CartPage extends WebDriverAutoSettings {
         }
     }
 
+    @Step("Add the second item into shopping cart")
     public void addItemToCart()
     {
         // добавление еще одной щетки в корзину

@@ -1,9 +1,13 @@
 package autotest;
 
+import io.qameta.allure.Description;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners({FailedStepListener.class})
 public class ThirdTest extends WebDriverAutoSettings{
     @Test
+    @Description("Test Description: Test checks the operations with goods in the catalog and cart")
     public void third_test() {
         MainPage mainPage = new MainPage();
         // переходим в раздел "электрические зубные щетки"

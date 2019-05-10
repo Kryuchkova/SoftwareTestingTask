@@ -40,6 +40,7 @@ public class MainPage extends WebDriverAutoSettings
         Assert.assertTrue(driver.findElement(By.cssSelector("div.header2-user-menu__email")).getText().equals(login));
     }
 
+    @Step("Change the region on given city {0}")
     public void changeCity(String city)
     {
         //изменение города
@@ -51,6 +52,7 @@ public class MainPage extends WebDriverAutoSettings
         driver.findElement(By.cssSelector("div.region-suggest__list-item")).click();
     }
 
+    @Step("Click on the enter button")
     public void clickBtnCity()
     {
         //нажатие на кнопку "продолжить с новым регионом"
@@ -58,11 +60,13 @@ public class MainPage extends WebDriverAutoSettings
         driver.navigate().refresh();
     }
 
+    @Step("Check the compliance of the region with the given city {0}")
     public void cityTxtCheckUp(String city)
     {
         Assert.assertTrue(driver.findElement(By.cssSelector("span.link__inner")).getText().equals(city));
     }
 
+    @Step("Click on the setting button in the header")
     public PersonalAccountPage changePageToPerArea()
     {
         waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.header2-nav__user")));
@@ -73,6 +77,7 @@ public class MainPage extends WebDriverAutoSettings
         return new PersonalAccountPage();
     }
 
+    @Step("Go to the specified catalog {0}")
     public CatalogPage goToCatalog(String request)
     {
         //переходим в раздел электрических зубных щеток

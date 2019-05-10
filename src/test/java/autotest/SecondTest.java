@@ -1,8 +1,11 @@
 package autotest;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners({FailedStepListener.class})
 public class SecondTest extends WebDriverAutoSettings
 {
     @DataProvider
@@ -12,6 +15,7 @@ public class SecondTest extends WebDriverAutoSettings
     }
 
     @Test (dataProvider = "citiesData")
+    @Description("Test Description: Test checks the change of region")
     public void second_test(String city)
     {
         MainPage mainPage = new MainPage();

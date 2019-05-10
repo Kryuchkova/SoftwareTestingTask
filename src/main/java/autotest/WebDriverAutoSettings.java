@@ -12,7 +12,7 @@ public class WebDriverAutoSettings
 {
     public static ChromeDriver driver;
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return driver;
     }
 

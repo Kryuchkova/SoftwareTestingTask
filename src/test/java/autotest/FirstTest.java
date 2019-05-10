@@ -1,11 +1,10 @@
 package autotest;
 
-
 import io.qameta.allure.Description;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners({TestListener.class})
+@Listeners({FailedStepListener.class})
 public class FirstTest extends WebDriverAutoSettings
 {
     @Test
