@@ -8,7 +8,8 @@ import org.testng.Assert;
 
 import java.util.ArrayList;
 
-public class PersonalAccountPage extends WebDriverAutoSettings {
+public class PersonalAccountPage extends WebDriverAutoSettings
+{
     private WebDriverWait waiter = new WebDriverWait(driver, 30);
 
     @Step("Transfer the driver from the old = {0} to the new page {1}")

@@ -10,6 +10,7 @@ import org.testng.Assert;
 public class MainPage extends WebDriverAutoSettings
 {
     private WebDriverWait waiter = new WebDriverWait(driver, 10);
+
     @Step("Click on the sign in button")
     public AccountOptions clickBtnSignIn()
     {

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-AllTestsSuite">
-              <span class="suite-name border-failed">AllTestsSuite</span>
+              <span class="suite-name border-passed">AllTestsSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-AllTestsSuite" class="hide-methods failed suite-AllTestsSuite"> (hide)</a> <!-- hide-methods failed suite-AllTestsSuite -->
-                      <a href="#" panel-name="suite-AllTestsSuite" class="show-methods failed suite-AllTestsSuite"> (show)</a> <!-- show-methods failed suite-AllTestsSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-AllTestsSuite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AllTestsSuite" title="autotest.ThirdTest" hash-for-method="third_test">third_test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-AllTestsSuite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,7 +107,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AllTestsSuite" title="autotest.SecondTest" hash-for-method="second_test(Хвалынск)">second_test(Хвалынск)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTestsSuite" title="autotest.SecondTest" hash-for-method="second_test(Энгельс)">second_test(Энгельс)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -131,7 +117,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AllTestsSuite" title="autotest.SecondTest" hash-for-method="second_test(Энгельс)">second_test(Энгельс)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTestsSuite" title="autotest.SecondTest" hash-for-method="second_test(Хвалынск)">second_test(Хвалынск)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTestsSuite" title="autotest.ThirdTest" hash-for-method="third_test">third_test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-AllTestsSuite -->
@@ -146,9 +137,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AllTestsSuite" class="panel AllTestsSuite">
-          <div class="suite-AllTestsSuite-class-failed">
+          <div class="suite-AllTestsSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">autotest.ThirdTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -157,62 +148,6 @@
                   <a name="third_test">
                   </a> <!-- third_test -->
                   <span class="method-name">third_test</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=74.0.3729.131)
-  (Driver info: chromedriver=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-UCRQ5H7O&apos;, ip: &apos;192.168.43.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 72.0.3626.69 (3c16f8a135abc..., userDataDir: C:\Users\kryuc\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51742}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
-Session ID: 83a4f55b4db0d3b5c265e9965fc57e9d
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
-	at autotest.CatalogPage.itemsCheckUp(CatalogPage.java:48)
-	at autotest.ThirdTest.third_test(ThirdTest.java:26)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-AllTestsSuite-class-failed -->
-          <div class="suite-AllTestsSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">autotest.SecondTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="second_test(Хвалынск)">
-                  </a> <!-- second_test(Хвалынск) -->
-                  <span class="method-name">second_test</span>
-                  <span class="parameters">(Хвалынск)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="second_test(Волгоград)">
-                  </a> <!-- second_test(Волгоград) -->
-                  <span class="method-name">second_test</span>
-                  <span class="parameters">(Волгоград)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="second_test(Энгельс)">
-                  </a> <!-- second_test(Энгельс) -->
-                  <span class="method-name">second_test</span>
-                  <span class="parameters">(Энгельс)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -228,6 +163,38 @@ Session ID: 83a4f55b4db0d3b5c265e9965fc57e9d
                   <a name="first_test">
                   </a> <!-- first_test -->
                   <span class="method-name">first_test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTestsSuite-class-passed -->
+          <div class="suite-AllTestsSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">autotest.SecondTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="second_test(Энгельс)">
+                  </a> <!-- second_test(Энгельс) -->
+                  <span class="method-name">second_test</span>
+                  <span class="parameters">(Энгельс)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="second_test(Волгоград)">
+                  </a> <!-- second_test(Волгоград) -->
+                  <span class="method-name">second_test</span>
+                  <span class="parameters">(Волгоград)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="second_test(Хвалынск)">
+                  </a> <!-- second_test(Хвалынск) -->
+                  <span class="method-name">second_test</span>
+                  <span class="parameters">(Хвалынск)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -304,28 +271,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'second_test')
 data.setCell(0, 2, 'autotest.SecondTest')
-data.setCell(0, 3, 22986);
+data.setCell(0, 3, 177135);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'second_test')
 data.setCell(1, 2, 'autotest.SecondTest')
-data.setCell(1, 3, 21871);
+data.setCell(1, 3, 114047);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'second_test')
-data.setCell(2, 2, 'autotest.SecondTest')
-data.setCell(2, 3, 19076);
+data.setCell(2, 1, 'first_test')
+data.setCell(2, 2, 'autotest.FirstTest')
+data.setCell(2, 3, 56930);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'third_test')
-data.setCell(3, 2, 'autotest.ThirdTest')
-data.setCell(3, 3, 11909);
+data.setCell(3, 1, 'second_test')
+data.setCell(3, 2, 'autotest.SecondTest')
+data.setCell(3, 3, 43535);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'first_test')
-data.setCell(4, 2, 'autotest.FirstTest')
-data.setCell(4, 3, 11161);
+data.setCell(4, 1, 'third_test')
+data.setCell(4, 2, 'autotest.ThirdTest')
+data.setCell(4, 3, 41178);
 window.suiteTableData['AllTestsSuite']= { tableData: data, tableDiv: 'times-div-AllTestsSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-AllTestsSuite">
               </div> <!-- times-div-AllTestsSuite -->
             </div> <!-- times-div -->
@@ -358,67 +325,65 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">first_test</span>
-                <span class="method-start">11534 ms</span>
+                <span class="method-start">63067 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">close</span>
-                <span class="method-start">22716 ms</span>
+                <span class="method-start">120009 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">autotest.SecondTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">32241 ms</span>
+                <span class="method-start">162711 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">second_test(Хвалынск)</span>
-                <span class="method-start">41637 ms</span>
+                <span class="method-start">195891 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">close</span>
-                <span class="method-start">64631 ms</span>
+                <span class="method-start">309945 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">73002 ms</span>
+                <span class="method-start">321064 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">second_test(Энгельс)</span>
-                <span class="method-start">83113 ms</span>
+                <span class="method-start">333805 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">close</span>
-                <span class="method-start">102193 ms</span>
+                <span class="method-start">510941 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">108877 ms</span>
+                <span class="method-start">526187 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">second_test(Волгоград)</span>
-                <span class="method-start">118472 ms</span>
+                <span class="method-start">537000 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">close</span>
-                <span class="method-start">140346 ms</span>
+                <span class="method-start">580540 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">autotest.ThirdTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">148675 ms</span>
+                <span class="method-start">595023 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">third_test</span>
-                <span class="method-start">159880 ms</span>
+                <span class="method-start">604193 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">close</span>
-                <span class="method-start">172417 ms</span>
+                <span class="method-start">645372 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

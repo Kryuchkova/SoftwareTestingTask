@@ -9,8 +9,10 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class CatalogPage extends WebDriverAutoSettings {
+public class CatalogPage extends WebDriverAutoSettings
+{
     private WebDriverWait waiter = new WebDriverWait(driver, 30);
+
     @Step("Set priceFrom on given price = {0}")
     public void  setFromPrice(String price)
     {

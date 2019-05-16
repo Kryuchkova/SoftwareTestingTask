@@ -6,7 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class CartPage extends WebDriverAutoSettings {
+public class CartPage extends WebDriverAutoSettings
+{
     private WebDriverWait waiter = new WebDriverWait(driver, 30);
 
     @Step("Check free shipping")
@@ -30,7 +31,7 @@ public class CartPage extends WebDriverAutoSettings {
     public void costCheckUp()
     {
         // проверка, что итоговая цена равна <стоимость щетки> + <доставка>
-        waiter.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-auto='total-items']")));
+        waiter.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-auto='total-price']")));
         String price = driver.findElement(By.xpath("//div[@data-auto='total-items']/span[@data-auto='value']")).getText().replaceAll("[\u20BD ]", "");
         String cost = driver.findElement(By.xpath("//div[@data-auto='total-price']/span[@class='_1oBlNqVHPq']")).getText().replaceAll("[\u20BD ]", "");
         String delivery = driver.findElement(By.xpath("//div[@data-auto='total-delivery']/span[@data-auto='value']")).getText();

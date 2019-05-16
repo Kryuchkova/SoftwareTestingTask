@@ -10,6 +10,7 @@ import java.util.Base64;
 public class AccountOptions extends WebDriverAutoSettings
 {
     private WebDriverWait waiter = new WebDriverWait(driver, 10);
+
     public static String getDecodePassword(String decodePassword)
     {
         return new String(Base64.getDecoder().decode(decodePassword.getBytes()));

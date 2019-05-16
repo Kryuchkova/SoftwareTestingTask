@@ -19,7 +19,7 @@ public class FailedStepListener extends WebDriverAutoSettings implements ITestLi
     }
 
     private void screen(String mes) {
-        SimpleDateFormat timeScreen = new SimpleDateFormat("hh.mm.ss");
+        SimpleDateFormat timeScreen = new SimpleDateFormat("dd.mm.yyyy 'at' hh.mm.ss");
         String date = timeScreen.format(new Date());
         makePic(mes + " " + date);
     }

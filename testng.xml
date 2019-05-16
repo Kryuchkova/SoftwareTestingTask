@@ -1,19 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="AllTestsSuite">
-    <test name="first_test">
+    <test name="checkTitle">
         <classes>
-            <class name="autotest.FirstTest"/>
+            <class name="autotest.CheckTitle"/>
         </classes>
     </test>
-    <test name="second_test">
+    <test name="checkCity">
         <classes>
-            <class name="autotest.SecondTest"/>
+            <class name="autotest.CheckCity"/>
         </classes>
     </test>
-    <test name="third_test">
+    <test name="checkCart">
         <classes>
-            <class name="autotest.ThirdTest"/>
+            <class name="autotest.CheckCart"/>
         </classes>
     </test>
 </suite>
